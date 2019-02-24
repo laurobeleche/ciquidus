@@ -1,6 +1,7 @@
 doctype html
 html
   head
+  
     title= settings.title
     link(rel='stylesheet', href='/themes/#{settings.theme}/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/jqplot/jquery.jqplot.css')
@@ -35,6 +36,7 @@ html
             $("#lastPrice").text(json.data[0].lastPrice.toFixed(8));
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcount").text(json.data[0].blockcount + ' blocks');
+            $("#lblMNCount").text(json.data[0].masternodeCountOnline + ' masternodes');
             $("#lblX1").text(' ');
           }});
         }
@@ -258,3 +260,4 @@ html
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -
+        label#lblMNCount.label.label-default -
